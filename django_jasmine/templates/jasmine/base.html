@@ -1,16 +1,17 @@
-{% load url from future %}
+{% load static %}{% load url from future %}
 <!doctype html>
 
 <html>
 <head>
     <title>Jasmine Spec Runner</title>
-    <link rel="stylesheet" href="{{ STATIC_URL }}jasmine-latest/jasmine.css"
-        media="screen">
+    <link rel="shortcut icon" type="image/png" href="{% static 'jasmine-2.0.2/jasmine_favicon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'jasmine-2.0.2/jasmine.css' %}">
 
-    {# core files #}
-    <script  src="{{ STATIC_URL }}jasmine-latest/jasmine.js"></script>
-    <script  src="{{ STATIC_URL }}jasmine-latest/jasmine-html.js"></script>
-    <script  src="{{ STATIC_URL }}jasmine-jquery-latest.js"></script>
+    <script type="text/javascript" src="{% static 'jasmine-2.0.2/jasmine.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jasmine-2.0.2/jasmine-html.js' %}"></script>
+    <script type="text/javascript" src="{% static 'jasmine-2.0.2/boot.js' %}"></script>
+
+
 
     {% block jasmine_preload %}{% endblock %}
 
@@ -31,7 +32,6 @@
 
 </head>
 <body>
-
 <script>
     {% block jasmine %}
     (function() {
