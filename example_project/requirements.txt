@@ -1,0 +1,4 @@
+Django==1.7
+django-extensions==1.4.0
+ipython==2.3.0
+selenium==2.43.0
