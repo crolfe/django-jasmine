@@ -8,3 +8,5 @@ build
 django_jasmine.egg-info/
 distribute*
 env
+*.sqlite3
+.idea
